@@ -1,32 +1,32 @@
-export const defaultTodos = [
+export const shoppingList = [
   {
     id: 1,
-    title: "Learn React",
+    title: "Milk",
     completed: true,
   },
   {
     id: 2,
-    title: "Build a project",
+    title: "Bread",
     completed: false,
   },
   {
     id: 3,
-    title: "Write documentation",
+    title: "Sugar",
     completed: true,
   },
   {
     id: 4,
-    title: "Test functionality",
+    title: "Eggs",
     completed: false,
   },
   {
     id: 5,
-    title: "Fix bugs",
+    title: "Cheese",
     completed: true,
   },
   {
     id: 6,
-    title: "Deploy to production",
+    title: "Cookies",
     completed: false,
   },
 ];
