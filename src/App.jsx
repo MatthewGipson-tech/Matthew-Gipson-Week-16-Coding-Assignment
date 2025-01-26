@@ -2,7 +2,7 @@ import "./App.css";
 
 import { Button } from "react-bootstrap";
 import TodoList from "./components/TodoList";
-import { defaultTodos } from "./data";
+import { shoppingList } from "./data";
 
 function App() {
   console.log(defaultTodos);
