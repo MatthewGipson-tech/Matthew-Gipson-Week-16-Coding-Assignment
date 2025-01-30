@@ -7,6 +7,8 @@ import { shoppingList } from "./data";
 function App() {
   console.log(shoppingList);
 
+  const [shoppingList, setShoppingList] = useState(shoppingList)
+
   return (
     <div className="container">
       <h1>Todo App Example</h1>
