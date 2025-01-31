@@ -2,7 +2,7 @@ import "./Todo.css";
 
 import { Button } from "react-bootstrap";
 
-export default function Todo({ todo }) {
+export default function TodoList({ updatedShoppingList, toggleComplete, deleteItem }) {
   return (
     <div className="todo">
       <p className={todo.completed ? "todo-title-completed " : ""}>
