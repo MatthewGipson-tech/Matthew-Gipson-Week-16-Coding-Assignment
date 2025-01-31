@@ -1,7 +1,7 @@
 import { ListGroup } from "react-bootstrap";
 import Todo from "./Todo";
 
-export default function TodoList({ todos }) {
+export default function TodoList({ item, toggleComplete, deleteItem }) {
   console.log(todos);
 
 
