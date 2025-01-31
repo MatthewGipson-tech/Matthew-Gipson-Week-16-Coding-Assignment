@@ -20,6 +20,12 @@ const addItem = () => {
   setShoppingList{[...shoppingList, newItem]}
 };
 
+const toggleComplete = {id:number} => {
+  const updatedShoppingList= shoppingList.map((shoppingList)) => {
+    if (todo.id === id)
+  }
+}
+
   return (
     <div className="container">
       <h1>Todo App Example</h1>
