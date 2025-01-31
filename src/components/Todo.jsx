@@ -9,8 +9,8 @@ export default function TodoList({ updatedShoppingList, toggleComplete, deleteIt
 
   return (
     <div className="todo">
-      <p className={todo.completed ? "todo-title-completed " : ""}>
-        {todo?.title}
+      <p className={defaultShoppingList.completed ? "shoppingList-title-completed " : ""}>
+        {defaultShoppingList?.title}
       </p>
       <div className="btn-group">
         <Button 
