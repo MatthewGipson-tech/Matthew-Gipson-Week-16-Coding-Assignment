@@ -2,11 +2,11 @@ import "./App.css";
 
 import { Button } from "react-bootstrap";
 import TodoList from "./components/TodoList";
-import { shoppingList } from "./data";
+import { defaultShoppingList } from "./data";
 import { useState } from "react";
 
 function App() {
-  console.log(shoppingList);
+  console.log(defaultShoppingList);
 
 const [shoppingList, setShoppingList] = useState(defaultShoppingList);
 
@@ -20,13 +20,11 @@ const addItem = () => {
   //setShoppingList{[...shoppingList, newItem]}
 };
 
-
-
   return (
     <div className="container">
       <h1>Todo App Example</h1>
       <Button className="mt-2 mb-2">Add Todo</Button>
-      <TodoList todos={shoppingList} />
+      <TodoList todos={defaultShoppingList} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-export const shoppingList = [
+export const defaultShoppingList = [
   {
     id: 1,
     title: "Milk",
