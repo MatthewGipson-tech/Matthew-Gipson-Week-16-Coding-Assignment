@@ -13,11 +13,12 @@ export default function TodoList({ updatedShoppingList, toggleComplete, deleteIt
         {todo?.title}
       </p>
       <div className="btn-group">
-        <Button variant="outline-primary"
+        <Button 
+        variant="outline-primary"
         onClick={() => toggleComplete(item.id)}>
           {todo.completed ? "Undo" : "Complete"}
         </Button>
-        <Button variant="outline-danger" onClick={() => deleteItem(NavItem.id)}>Delete</Button>
+        <Button variant="outline-danger" onClick={() => deleteItem(item.id)}>Delete</Button>
       </div>
     </div>
   );
