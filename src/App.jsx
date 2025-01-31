@@ -3,11 +3,22 @@ import "./App.css";
 import { Button } from "react-bootstrap";
 import TodoList from "./components/TodoList";
 import { shoppingList } from "./data";
+import { useState } from "react";
 
 function App() {
   console.log(shoppingList);
 
-  const [shoppingList, setShoppingList] = useState(shoppingList)
+const [shoppingList, setShoppingList] = useState(defaultShoppingList);
+
+const addItem = () => {
+  const newItem = {
+    id: shoppingList.length + 1,
+    title: "New Item",
+    completed: false,
+  };
+
+  setShoppingList{[...shoppingList, newItem]}
+};
 
   return (
     <div className="container">
