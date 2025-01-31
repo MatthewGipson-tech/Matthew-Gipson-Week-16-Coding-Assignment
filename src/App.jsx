@@ -21,12 +21,13 @@ const addItem = () => {
 };
 
  const toggleComplete = (id) => {
-  if (shoppingList.id === id) {
-    shoppingList.completed = !shoppingList.completed;
-  }
-  return shoppingList;
- }
-
+  const updatedShoppingList = defaultShoppingList.map(item) =>
+  if (defaultShoppingList=== id) {
+    defaultShoppingList.completed = !defaultShoppingList.completed;
+    }
+  return defaultShoppingList;
+ };
+ 
 setShoppingList(updatedShoppingList);
 
 const deleteItem = (id) => {
@@ -45,7 +46,7 @@ const deleteItem = (id) => {
       />
     </div>
   );
-}
+};
 
 
 export default App; 
