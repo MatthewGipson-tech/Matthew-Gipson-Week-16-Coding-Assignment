@@ -21,15 +21,15 @@ const addItem = () => {
 };
 
  const toggleComplete = (id) => {
-  const updatedShoppingList = defaultShoppingList.map(item) =>
-  if (defaultShoppingList=== id) {
+  const updatedShoppingList = defaultShoppingList.map((item) => {
+  if (defaultShoppingList.id === id) {
     defaultShoppingList.completed = !defaultShoppingList.completed;
     }
   return defaultShoppingList;
- };
+  });
  
 setShoppingList(updatedShoppingList);
-
+};
 const deleteItem = (id) => {
   const updatedShoppingList = shoppingList.filter((item) => item.id !== id);
   setShoppingList(updatedShoppingList);
