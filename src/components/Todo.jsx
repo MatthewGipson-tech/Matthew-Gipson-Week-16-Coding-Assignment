@@ -6,7 +6,7 @@ import { Button } from "react-bootstrap";
 export default function TodoList({ updatedShoppingList, toggleComplete, deleteItem }) {
   console.log(defaultShoppingList);
 
-  
+
   return (
     <div className="todo">
       <p className={todo.completed ? "todo-title-completed " : ""}>
@@ -16,7 +16,7 @@ export default function TodoList({ updatedShoppingList, toggleComplete, deleteIt
         <Button variant="outline-primary">
           {todo.completed ? "Undo" : "Complete"}
         </Button>
-        <Button variant="outline-danger">Delete</Button>
+        <Button variant="outline-danger" onClick={() => deleteItem(NavItem.id)}>Delete</Button>
       </div>
     </div>
   );
