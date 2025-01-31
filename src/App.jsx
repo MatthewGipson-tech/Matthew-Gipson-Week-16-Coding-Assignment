@@ -17,14 +17,14 @@ const addItem = () => {
     completed: false,
   };
 
-  setShoppingList{[...shoppingList, newItem]}
+  //setShoppingList{[...shoppingList, newItem]}
 };
 
-const toggleComplete = {id:number} => {
-  const updatedShoppingList= shoppingList.map((shoppingList)) => {
-    if (todo.id === id)
-  }
-}
+//const toggleComplete = {id:number} => {
+  //const updatedShoppingList= shoppingList.map((shoppingList)) => {
+ //   if (todo.id === id)
+//  }
+//}
 
   return (
     <div className="container">
