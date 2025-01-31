@@ -9,7 +9,7 @@ export default function TodoList({ updatedShoppingList, toggleComplete, deleteIt
     <ListGroup>
       {defaultShoppingList.map((item) => (
         <ListGroup.Item key={item.id}>
-          <Todo todo={todo} 
+          <Todo item={item} 
           toggleComplete={toggleComplete}
           deleteItem={deleteItem}
           />
