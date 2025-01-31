@@ -1,8 +1,12 @@
+import { defaultShoppingList } from "../data";
 import "./Todo.css";
 
 import { Button } from "react-bootstrap";
 
 export default function TodoList({ updatedShoppingList, toggleComplete, deleteItem }) {
+  console.log(defaultShoppingList);
+
+  
   return (
     <div className="todo">
       <p className={todo.completed ? "todo-title-completed " : ""}>
