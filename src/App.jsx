@@ -21,9 +21,9 @@ const addItem = () => {
 };
 
  const toggleComplete = (id) => {
-  const updatedShoppingList = defaultShoppingList.map((item) => {
-  if (defaultShoppingList.id === id) {
-    defaultShoppingList.completed = !defaultShoppingList.completed;
+  const updatedItem = defaultShoppingList.map((item) => {
+  if (updatedItem.id === id) {
+    updatedItem.completed = !updatedItem.completed;
     }
   return defaultShoppingList;
   });

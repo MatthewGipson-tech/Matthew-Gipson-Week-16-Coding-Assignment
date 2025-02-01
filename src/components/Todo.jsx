@@ -16,7 +16,7 @@ export default function TodoList({ updatedShoppingList, toggleComplete, deleteIt
         <Button 
         variant="outline-primary"
         onClick={() => toggleComplete(item.id)}>
-          {todo.completed ? "Undo" : "Complete"}
+          {item.completed ? "Undo" : "Complete"}
         </Button>
         <Button variant="outline-danger" onClick={() => deleteItem(item.id)}>Delete</Button>
       </div>
