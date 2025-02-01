@@ -2,7 +2,7 @@ import { ListGroup } from "react-bootstrap";
 import Todo from "./Todo";
 import { defaultShoppingList } from "../data";
 
-export default function TodoList({ items, toggleComplete, deleteItem }) {
+export default function TodoList({ defaultShoppingList, toggleComplete, deleteItem }) {
   console.log(defaultShoppingList);
 
   return (
