@@ -3,7 +3,7 @@ import "./Todo.css";
 
 import { Button } from "react-bootstrap";
 
-export default function TodoList({ addItem, toggleComplete, deleteItem }) {
+export default function TodoList({ item, toggleComplete, deleteItem }) {
   console.log(defaultShoppingList);
 
 

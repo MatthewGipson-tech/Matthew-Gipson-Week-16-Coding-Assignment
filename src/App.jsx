@@ -31,7 +31,7 @@ const addItem = () => {
 setShoppingList(updatedShoppingList);
 };
 const deleteItem = (id) => {
-  const updatedShoppingList = shoppingList.filter((item) => item.id !== id);
+  const updatedShoppingList = shoppingList.filter((items) => items.id !== id);
   setShoppingList(updatedShoppingList);
 }
 
