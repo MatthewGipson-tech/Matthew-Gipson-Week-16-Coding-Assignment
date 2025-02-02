@@ -1,55 +1,52 @@
 import "./App.css";
 
-
 import { Button } from "react-bootstrap";
 import TodoList from "./components/TodoList";
-import { defaultShoppingList } from "./data";
+import { defaultTodos } from "./data";
 import { useState } from "react";
 
 function App() {
-  console.log(defaultShoppingList);
+  console.log(defaultTodos);
+  const [todos, setTodos] = useState(defaultTodos); //State to store todos
 
-const [shoppingList, setShoppingList] = useState(defaultShoppingList);
-
-const addItem = () => {
-  const newItem = {
-    id: shoppingList.length + 1,
-    title: "New Item",
-    completed: false,
+  const addTodo = () => {
+    const newTodo = {
+      id: todos.length + 1,
+      title: "New Todo",
+      completed: false,
+    };
+    setTodos([...todos, newTodo]);
   };
 
-  setShoppingList([...shoppingList, newItem]);
-};
+  const toggleComplete = (id) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
 
- const toggleComplete = (id) => {
-  const updatedItem = defaultShoppingList.map((items) => {
-  if (updatedItem.id === id) {
-    updatedItem.completed = !updatedItem.completed;
-    }
-  return defaultShoppingList;
-  });
- 
-setShoppingList(updatedShoppingList);
-};
-const deleteItem = (id) => {
-  const updatedShoppingList = shoppingList.filter((items) => items.id !== id);
-  setShoppingList(updatedShoppingList);
-}
+    setTodos(updatedTodos);
+  };
 
+  const deleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
 
   return (
     <div className="container">
       <h1>Todo App Example</h1>
-      <Button className="mt-2 mb-2" onClick={addItem}>Add Todo
+      <Button className="mt-2 mb-2" onClick={addTodo}>
+        Add Todo
       </Button>
-      <TodoList 
-      todos={defaultShoppingList} 
-      toggleComplete={toggleComplete}
-      deleteItem={deleteItem}
+      <TodoList
+        todos={todos}
+        toggleComplete={toggleComplete}
+        deleteTodo={deleteTodo}
       />
     </div>
   );
-};
+}
 
-
-export default App; 
+export default App;

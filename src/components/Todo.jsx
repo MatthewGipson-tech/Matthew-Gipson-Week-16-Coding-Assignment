@@ -2,24 +2,23 @@ import "./Todo.css";
 
 import { Button } from "react-bootstrap";
 
-export default function TodoList({ defaultShoppingList, toggleComplete, deleteItem }) {
-  console.log(defaultShoppingList);
-
-
+export default function Todo({ todo, toggleComplete, deleteTodo }) {
   return (
     <div className="todo">
-      <p className={defaultShoppingList.completed ? "shoppingList-title-completed " : ""}>
-        {defaultShoppingList?.title}
+      <p className={todo.completed ? "todo-title-completed " : ""}>
+        {todo?.title}
       </p>
       <div className="btn-group">
-        <Button 
-        variant="outline-primary"
-        onClick={() => toggleComplete(updatedItem.id)}>
-          {updatedItem.completed ? "Undo" : "Complete"}
+        <Button
+          variant="outline-primary"
+          onClick={() => toggleComplete(todo.id)}
+        >
+          {todo.completed ? "Undo" : "Complete"}
         </Button>
-        <Button variant="outline-danger" onClick={() => deleteItem(items.id)}>Delete</Button>
+        <Button variant="outline-danger" onClick={() => deleteTodo(todo.id)}>
+          Delete
+        </Button>
       </div>
     </div>
   );
 }
- 

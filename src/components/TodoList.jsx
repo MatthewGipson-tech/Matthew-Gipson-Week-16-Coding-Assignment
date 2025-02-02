@@ -1,17 +1,17 @@
 import { ListGroup } from "react-bootstrap";
-import { defaultShoppingList } from "../data";
-import { todo } from "node:test";
+import Todo from "./Todo";
 
-export default function TodoList({ defaultShoppingList, toggleComplete, deleteItem }) {
-  console.log(defaultShoppingList);
+export default function TodoList({ todos, toggleComplete, deleteTodo }) {
+  console.log(todos);
 
   return (
     <ListGroup>
-      {defaultShoppingList.map((items) => (
-        <ListGroup.Item key={items.id}>
-          <todo items = {todo} 
-          toggleComplete={toggleComplete}
-          deleteItem={deleteItem}
+      {todos.map((todo) => (
+        <ListGroup.Item key={todo.id}>
+          <Todo
+            todo={todo}
+            toggleComplete={toggleComplete}
+            deleteTodo={deleteTodo}
           />
         </ListGroup.Item>
       ))}
