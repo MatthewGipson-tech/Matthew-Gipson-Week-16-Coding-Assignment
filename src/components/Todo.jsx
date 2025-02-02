@@ -1,4 +1,3 @@
-import { defaultShoppingList } from "../data";
 import "./Todo.css";
 
 import { Button } from "react-bootstrap";
