@@ -1,5 +1,6 @@
 import "./App.css";
 
+
 import { Button } from "react-bootstrap";
 import TodoList from "./components/TodoList";
 import { defaultShoppingList } from "./data";
@@ -21,7 +22,7 @@ const addItem = () => {
 };
 
  const toggleComplete = (id) => {
-  const updatedItem = defaultShoppingList.map((item) => {
+  const updatedItem = defaultShoppingList.map((items) => {
   if (updatedItem.id === id) {
     updatedItem.completed = !updatedItem.completed;
     }
@@ -39,8 +40,10 @@ const deleteItem = (id) => {
   return (
     <div className="container">
       <h1>Todo App Example</h1>
-      <Button className="mt-2 mb-2" onClick={addItem}>Add Todo</Button>
-      <TodoList todos={defaultShoppingList} 
+      <Button className="mt-2 mb-2" onClick={addItem}>Add Todo
+      </Button>
+      <TodoList 
+      todos={defaultShoppingList} 
       toggleComplete={toggleComplete}
       deleteItem={deleteItem}
       />
