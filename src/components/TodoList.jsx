@@ -6,7 +6,7 @@ export default function TodoList({ defaultShoppingList, toggleComplete, deleteIt
 
   return (
     <ListGroup>
-      {defaultShoppingList?.map((todo) => (
+      {defaultShoppingList.map((todo) => (
         <ListGroup.Item key={todo.id}>
           <todo item = {addItem} 
           toggleComplete={toggleComplete}
