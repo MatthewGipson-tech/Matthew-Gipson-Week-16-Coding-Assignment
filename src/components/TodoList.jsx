@@ -1,5 +1,4 @@
 import { ListGroup } from "react-bootstrap";
-import Todo from "./Todo";
 import { defaultShoppingList } from "../data";
 
 export default function TodoList({ defaultShoppingList, toggleComplete, deleteItem }) {
@@ -7,7 +6,7 @@ export default function TodoList({ defaultShoppingList, toggleComplete, deleteIt
 
   return (
     <ListGroup>
-      {defaultShoppingList.map((todo) => (
+      {defaultShoppingList?.map((todo) => (
         <ListGroup.Item key={todo.id}>
           <todo item = {addItem} 
           toggleComplete={toggleComplete}
