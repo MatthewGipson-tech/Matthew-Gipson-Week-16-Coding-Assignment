@@ -1,13 +1,15 @@
 import "./App.css";
 
-import { Button, Form, Alert } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
-import { useState } from "react";
+import { FC, useState } from "react";
 
 function App() {
   console.log(defaultTodos);
-  const [todos, setTodos] = useState(defaultTodos); 
+  const TodoApp: FC = () => {
+  const [showAlert, setShowAlert] = useState<boolean>(false);
+  const [todos, setTodos] = useState<TodoType[]>(defaultTodos); 
   const [newTodos, setNewTodos] = useState<string>(""); 
 
 
@@ -17,7 +19,7 @@ function App() {
       id: todos.length + 1,
       title: "New Todo",
       completed: false,
-    };
+  }};
     setTodos([...todos, newTodo]);
     setNewTodos = "";
   };
