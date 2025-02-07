@@ -10,6 +10,8 @@ function App() {
   const [todos, setTodos] = useState(defaultTodos); 
   const [newTodos, setNewTodos] = useState<string>(""); 
 
+
+
   const addTodo = () => {
     const newTodo = {
       id: todos.length + 1,
@@ -17,6 +19,7 @@ function App() {
       completed: false,
     };
     setTodos([...todos, newTodo]);
+    setNewTodos = "";
   };
 
   const toggleComplete = (id) => {
