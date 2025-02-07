@@ -1,6 +1,8 @@
 import "./Todo.css";
 
 import { Button } from "react-bootstrap";
+import { FC } from "react";
+
 
 export default function Todo({ todo, toggleComplete, deleteTodo }) {
   return (
