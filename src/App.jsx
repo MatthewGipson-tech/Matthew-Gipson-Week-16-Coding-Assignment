@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Button } from "react-bootstrap";
+import { Button, Form, Alert } from "react-bootstrap";
 import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
 import { useState } from "react";
@@ -8,6 +8,7 @@ import { useState } from "react";
 function App() {
   console.log(defaultTodos);
   const [todos, setTodos] = useState(defaultTodos); 
+  const [newTodos, setNewTodos] = useState<string>(""); 
 
   const addTodo = () => {
     const newTodo = {
