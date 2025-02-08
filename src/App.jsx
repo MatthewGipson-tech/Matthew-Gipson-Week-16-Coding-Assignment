@@ -1,15 +1,17 @@
 import "./App.css";
 
 import { Button, Form } from "react-bootstrap";
+import Alert from "react-bootstrap/Alert"
 import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
-import { FC, useState } from "react";
+import { FC , useState } from "react";
 
 function App() {
   console.log(defaultTodos);
-  const TodoApp: FC = () => {
+
+  const FC = () => {
   const [showAlert, setShowAlert] = useState<boolean>(false);
-  const [todos, setTodos] = useState<TodoType[]>(defaultTodos); 
+  const [todos, setTodos] = useState<TodoType>(defaultTodos); 
   const [newTodos, setNewTodos] = useState<string>(""); 
 
   const addTodo = () => {
@@ -18,7 +20,7 @@ function App() {
       return;
     }
   }};
-  const todo: TodoType = {
+  const TodoType = {
     id: todos.length + 1,
     title: newTodo,
     completed: false,
@@ -27,7 +29,7 @@ function App() {
     setNewTodo("");
   };
 
-  const toggleComplete = (id: number) => {
+  const toggleComplete = (id) => {
     const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.completed = !todo.completed;
@@ -38,7 +40,7 @@ function App() {
     setTodos(updatedTodos);
   };
 
-  const deleteTodo = (id: number) => {
+  const deleteTodo = (id) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
   };
