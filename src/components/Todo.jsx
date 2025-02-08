@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import { FC } from "react";
 import { Todos } from "../../types";
 
-const Todo: FC<TodoProps> = ({ todo, toggleComplete, deleteTodo }) => {
+const Todo: FC TodoProps = ({ todo, toggleComplete, deleteTodo }) => {
   const todoSyles = {
     todo: {
       textDecoration: todo.completed ? "line-through" : "none",
