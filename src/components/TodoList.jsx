@@ -4,9 +4,9 @@ import Todo from "./Todo";
 import { Todos } from "../../types";
 
 const TodoProp {
-  todos: TodoType;
+  todos: TodoType,
   toggleComplete: (id) => void
-  deleteTodo: (id) => void
+  deleteTodo; (id) => void
 };
 
 const TodoListProps = ({ todos, toggleComplete, deleteTodo }) => {
