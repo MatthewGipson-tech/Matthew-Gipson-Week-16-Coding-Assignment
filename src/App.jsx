@@ -5,7 +5,7 @@ import Alert from "react-bootstrap/Alert"
 import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
 import { FC , useState } from "react";
-//import { Todo as TodoType } from "../../types";
+import { Todo as TodoType } from "../../types";
 
   const TodoApp  = () => {
     const [showAlert, setShowAlert] = useState<boolean>(false);

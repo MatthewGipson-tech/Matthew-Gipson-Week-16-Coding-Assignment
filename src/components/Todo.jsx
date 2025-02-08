@@ -3,10 +3,11 @@ import "./Todo.css";
 import { Button } from "react-bootstrap";
 import { FC } from "react";
 import { Todo as TodoType } from "../../types";
+
  Props {
   todo: TodoType;
-  toggleComplete: (number) => void;
-  deleteTodo: ( number) => void;
+  toggleComplete: (id) => void;
+  deleteTodo: (id) => void;
 }
 
 const  TodoProps = ({ todo, toggleComplete, deleteTodo }) => {
