@@ -5,11 +5,11 @@ import Alert from "react-bootstrap/Alert"
 import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
 import { FC , useState } from "react";
-import { Todo as TodoType } from "../../types";
+//import { Todo as TodoType } from "../../types";
 
-  const TodoApp: FC = () => {
+  const TodoApp  = () => {
     const [showAlert, setShowAlert] = useState<boolean>(false);
-    const [todos, setTodos] = useState<TodoType[]>(defaultTodos);
+    const [todos, setTodos] = useState<TodoType[id]>(defaultTodos);
     const [newTodo, setNewTodo] = useState<string>("");
 
     const addTodo = () => {
@@ -17,7 +17,7 @@ import { Todo as TodoType } from "../../types";
         setShowAlert(true);
         return;
       }
-      const todo: TodoType = {
+      const TodoType = {
         id: todos.length + 1,
         title: newTodo,
         completed: false,
@@ -26,7 +26,7 @@ import { Todo as TodoType } from "../../types";
       setNewTodo("");
     };
   
-    const toggleComplete = (id: number) => {
+    const toggleComplete = ( number) => {
       const updatedTodos = todos.map((todo) => {
         if (todo.id === id) {
           todo.completed = !todo.completed;
@@ -37,7 +37,7 @@ import { Todo as TodoType } from "../../types";
       setTodos(updatedTodos);
     };
   
-    const deleteTodo = (id: number) => {
+    const deleteTodo = (number) => {
       const updatedTodos = todos.filter((todo) => todo.id !== id);
       setTodos(updatedTodos);
     };

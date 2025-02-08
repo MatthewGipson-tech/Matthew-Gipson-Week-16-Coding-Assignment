@@ -3,14 +3,13 @@ import "./Todo.css";
 import { Button } from "react-bootstrap";
 import { FC } from "react";
 import { Todo as TodoType } from "../../types";
-
-interface TodoProps {
+ Props {
   todo: TodoType;
-  toggleComplete: (id: number) => void;
-  deleteTodo: (id: number) => void;
+  toggleComplete: (number) => void;
+  deleteTodo: ( number) => void;
 }
 
-const Todo: FC<TodoProps> = ({ todo, toggleComplete, deleteTodo }) => {
+const  TodoProps = ({ todo, toggleComplete, deleteTodo }) => {
   const todoSyles = {
     
     todo: {
