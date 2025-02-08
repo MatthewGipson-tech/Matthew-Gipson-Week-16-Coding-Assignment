@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { ListGroup } from "react-bootstrap";
 import Todo from "./Todo";
-import { Todos } from "../../types";
+import { Todo } from "../../types";
 
 const TodoProp {
   todos: TodoType,

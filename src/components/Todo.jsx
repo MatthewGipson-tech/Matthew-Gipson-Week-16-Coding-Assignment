@@ -2,10 +2,17 @@ import "./Todo.css";
 
 import { Button } from "react-bootstrap";
 import { FC } from "react";
-import { Todos } from "../../types";
+import { Todo as TodoType } from "../../types";
 
-const Todo: FC TodoProps = ({ todo, toggleComplete, deleteTodo }) => {
+interface TodoProps {
+  todo: TodoType;
+  toggleComplete: (id: number) => void;
+  deleteTodo: (id: number) => void;
+}
+
+const Todo: FC<TodoProps> = ({ todo, toggleComplete, deleteTodo }) => {
   const todoSyles = {
+    
     todo: {
       textDecoration: todo.completed ? "line-through" : "none",
       color: todo.completed ? "lightgray" : "black",
@@ -52,4 +59,4 @@ const styles = {
   },
 };
 
-export default Todos;
+export default Todo;
