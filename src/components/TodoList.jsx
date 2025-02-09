@@ -1,30 +1,21 @@
-import { FC } from "react";
 import { ListGroup } from "react-bootstrap";
 import Todo from "./Todo";
-import { Todo as TodoType } from "../../types";
 
-const TodoProp {
-  todos: TodoType,
-  toggleComplete: (id) => void
-  deleteTodo; (id) => void
-};
+export default function TodoList({ todos, toggleComplete, deleteTodo }) {
+  console.log(todos);
 
-const TodoListProps = ({ todos, toggleComplete, deleteTodo }) => {
   return (
-    <div>
-      <ListGroup>
-        {todos.map((todo) => (
-          <ListGroup.Item key={todo.id}>
-            <Todo
-              todo={todo}
-              toggleComplete={toggleComplete}
-              deleteTodo={deleteTodo}
-            />
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
-    </div>
+    <ListGroup>
+      {todos.map((todo) => (
+        <ListGroup.Item key={todo.id}>
+          <Todo
+            todo={todo}
+            toggleComplete={toggleComplete}
+            deleteTodo={deleteTodo}
+          />
+        </ListGroup.Item>
+      ))}
+    </ListGroup>
   );
-};
-
-export default TodoList;
+}
+ 

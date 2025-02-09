@@ -1,76 +1,52 @@
 import "./App.css";
 
-import { Button, Form } from "react-bootstrap";
-import Alert from "react-bootstrap/Alert"
+import { Button } from "react-bootstrap";
 import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
-import { FC , useState } from "react";
-import { Todo as TodoType } from "../../types";
+import { useState } from "react";
 
-  const TodoApp  = () => {
-    const [showAlert, setShowAlert] = useState<boolean>(false);
-    const [todos, setTodos] = useState<TodoType[id]>(defaultTodos);
-    const [newTodo, setNewTodo] = useState<string>("");
+function App() {
+  console.log(defaultTodos);
+  const [todos, setTodos] = useState(defaultTodos); 
 
-    const addTodo = () => {
-      if (!newTodo) {
-        setShowAlert(true);
-        return;
-      }
-      const TodoType = {
-        id: todos.length + 1,
-        title: newTodo,
-        completed: false,
-      };
-      setTodos([...todos, todo]);
-      setNewTodo("");
+  const addTodo = () => {
+    const newTodo = {
+      id: todos.length + 1,
+      title: "New Todo",
+      completed: false,
     };
-  
-    const toggleComplete = ( number) => {
-      const updatedTodos = todos.map((todo) => {
-        if (todo.id === id) {
-          todo.completed = !todo.completed;
-        }
-        return todo;
-      });
-  
-      setTodos(updatedTodos);
-    };
-  
-    const deleteTodo = (number) => {
-      const updatedTodos = todos.filter((todo) => todo.id !== id);
-      setTodos(updatedTodos);
-    };
-  
-    return (
-      <div style={{ width: "550px" }}>
-        {showAlert && (
-          <Alert variant="danger" onClose={() => setShowAlert(false)} dismissible>
-            <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-            <p>
-              Please enter a task before adding it to the list! The task cannot be
-              empty.
-            </p>
-          </Alert>
-        )}
-        <h2>Todo App Example</h2>
-        <Form.Control
-          type="text"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Enter a task"
-        />
-        <Button onClick={addTodo} className="mt-2 mb-2">
-          Add Todo
-        </Button>
-        <TodoList
-          todos={todos}
-          toggleComplete={toggleComplete}
-          deleteTodo={deleteTodo}
-        />
-      </div>
-    );
+    setTodos([...todos, newTodo]);
   };
-  
+
+  const toggleComplete = (id) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    });
+
+    setTodos(updatedTodos);
+  };
+
+  const deleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+
+  return (
+    <div className="container">
+      <h1>Todo App Example</h1>
+      <Button className="mt-2 mb-2" onClick={addTodo}>
+        Add Todo
+      </Button>
+      <TodoList
+        todos={todos}
+        toggleComplete={toggleComplete}
+        deleteTodo={deleteTodo}
+      />
+    </div>
+  );
+}
 
 export default App;
