@@ -5,14 +5,17 @@ import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
 import { useState } from "react";
 import {React } from 'react';
-import { input } from "./components/input";
 
 function App() {
   console.log(defaultTodos);
   const [todos, setTodos] = useState(defaultTodos);
   
 
-  const addTodo = () => {
+  const addTodo = (e) => {
+    e.preventDefault();
+    if(newTodo.title === "") 
+      return alert("Please enter a todo")
+
     const newTodo = {
       id: todos.length + 1,
       title: "New Todo",
@@ -40,9 +43,19 @@ function App() {
   return (
     <div className="container">
       <h1>Todo App Example</h1>
-      <Button className="mt-2 mb-2" onClick={addTodo}>
-        Add Todo
-      </Button>
+      <Form onSubmit={addTodo}>
+        <Form.Group controlId="formNewTodo">
+          <Form.Control
+            type="text"
+            placeholder="Enter new todo"
+            value={newTodoTitle}
+            onChange={(e) => setNewTodoTitle(e.target.value)}
+          />
+        </Form.Group>
+        <Button className="mt-2 mb-2" type="submit">
+          Add Todo
+        </Button>
+      </Form>
       <TodoList
         todos={todos}
         toggleComplete={toggleComplete}
