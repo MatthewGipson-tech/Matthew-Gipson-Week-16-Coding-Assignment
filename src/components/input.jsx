@@ -13,6 +13,10 @@ function MyInput() {
       setInputValue(event.target.value);
     };
   
+    <label>
+        Text input: <input name="myInput" />
+      </label>
+      
     return (
       <input
         type="text"
