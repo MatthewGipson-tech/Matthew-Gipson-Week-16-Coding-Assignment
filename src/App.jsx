@@ -19,7 +19,7 @@ function App() {
 
     const newTodo = {
       id: todos.length + 1,
-      title: "New Todo",
+      title: newTodoTitle,
       completed: false,
     };
     setTodos([...todos, newTodo]);
