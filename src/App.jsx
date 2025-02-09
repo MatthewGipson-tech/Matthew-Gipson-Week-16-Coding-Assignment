@@ -7,7 +7,9 @@ import { useState } from "react";
 
 function App() {
   console.log(defaultTodos);
-  const [todos, setTodos] = useState(defaultTodos); 
+  const [todos, setTodos] = useState(defaultTodos);
+  
+
 
   const addTodo = () => {
     const newTodo = {
