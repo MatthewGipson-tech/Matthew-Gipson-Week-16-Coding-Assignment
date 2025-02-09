@@ -9,11 +9,12 @@ import {React } from 'react';
 function App() {
   console.log(defaultTodos);
   const [todos, setTodos] = useState(defaultTodos);
+  const [newTodoTitle, setNewTodoTitle] = useState("");
   
 
   const addTodo = (e) => {
     e.preventDefault();
-    if(newTodo.title === "") 
+    if(newTodoTitle.trim === "") 
       return alert("Please enter a todo")
 
     const newTodo = {
