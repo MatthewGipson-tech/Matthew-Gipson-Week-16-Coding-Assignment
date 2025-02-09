@@ -5,7 +5,7 @@ import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
 import { useState } from "react";
 import {React } from 'react';
-import { input } from "assets"
+import { input } from "./components"
 
 function App() {
   console.log(defaultTodos);
