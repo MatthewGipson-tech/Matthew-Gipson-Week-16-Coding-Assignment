@@ -5,16 +5,11 @@ import TodoList from "./components/TodoList";
 import { defaultTodos } from "./data";
 import { useState } from "react";
 import {React } from 'react';
-import { input } from "./components"
+import { input } from "./components/input";
 
 function App() {
   console.log(defaultTodos);
   const [todos, setTodos] = useState(defaultTodos);
-  
- 
-
-
-  
   
 
   const addTodo = () => {
