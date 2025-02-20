@@ -7,13 +7,13 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/Home.jsx";
 import ToDoPage from "./components/ToDoPage.jsx";
+import Layout from "./components/Layout.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />
-  },
-      children: [ 
+    element: <Layout/>,
+    children: [ 
         {
           path: "/",
           element: <HomePage />
