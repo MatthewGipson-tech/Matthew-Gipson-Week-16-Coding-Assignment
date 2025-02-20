@@ -14,21 +14,16 @@ const router = createBrowserRouter([
       <Link to="/things-to-do">Things to do</Link>Home
       <Outlet/>
       </div>,
-      children: [ ]
-        
-  },
-  {
-    path: "/",
-    element: <div>
-      <Link to="/">Home</Link>
-      <Link href="/things-to-do">Things to do</Link>
-      Home</div>
+      children: [ 
+        {
+          path: "/",
+          element: <div>Home Page</div>
   },
   {
     path:"/things-to-do",
-    element: <div>
-      <Link to="/">Home</Link>
-      What to do?</div>
+    elemeent: <div>What to do?</div>
+  }
+]
   }
 ])
 
