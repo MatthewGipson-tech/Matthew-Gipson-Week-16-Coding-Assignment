@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/things-to-do",
-    element: <thingsToDo/>
+    element: <ToDoPage/>
   }
 ]
   }
