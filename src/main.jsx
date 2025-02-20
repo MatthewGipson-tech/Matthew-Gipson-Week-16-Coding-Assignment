@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <div>
       <Link to="/">Home</Link>
-      <Link href="/things-to-do">Things to do</Link>Home
+      <Link to="/things-to-do">Things to do</Link>Home
       <Outlet/>
       </div>,
       children: [ ]
