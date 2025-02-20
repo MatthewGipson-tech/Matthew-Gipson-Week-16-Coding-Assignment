@@ -12,23 +12,22 @@ import Layout from "./components/Layout.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
-    children: [ 
-        {
-          path: "/",
-          element: <HomePage />
-  },
-  {
-    path:"/things-to-do",
-    element: <ToDoPage/>,
-  },
-],
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/things-to-do",
+        element: <ToDoPage />,
+      },
+    ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>
 );
-  
