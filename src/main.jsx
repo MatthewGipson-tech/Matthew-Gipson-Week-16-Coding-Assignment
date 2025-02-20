@@ -4,8 +4,9 @@ import "./index.css";
 import App from "./App.jsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, Link, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./components/Home.jsx";
+import ToDoPage from "./components/ToDoPage.jsx";
 
 const router = createBrowserRouter([
   {
