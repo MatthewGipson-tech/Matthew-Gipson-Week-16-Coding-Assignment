@@ -20,11 +20,11 @@ const router = createBrowserRouter([
   },
   {
     path:"/things-to-do",
-    element: <ToDoPage/>
-  }
-]
-  }
-])
+    element: <ToDoPage/>,
+  },
+],
+  },
+]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
