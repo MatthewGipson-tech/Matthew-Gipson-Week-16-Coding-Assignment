@@ -1,4 +1,4 @@
-export default {
+const styles = {
   container: {
     width: '100vw',
     height: '100vh',
@@ -7,5 +7,6 @@ export default {
     textAlign: 'center',
     marginTop: '50px',
   },
+};
 
- 
+export default styles;
