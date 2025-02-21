@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import "./App.css";
+import "./App.jsx/index.js";
 
 
 import { StrictMode } from "react";
